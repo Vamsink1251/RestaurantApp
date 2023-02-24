@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZemosoRestaurant</title>
+    <link href="zemoso-restaurant.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; flex-direction: column;">
+     <div style="background-color: black;"><h1 style="color: white;"><center>Zemoso<span style="color: red;">Restaurant</span></center></h1></div>   
+    <div class="container">
+        <div class="Table" >
+            <h3> <center>TABLES</center></h3>
+            <center><input type='text' id="tables" placeholder="Search Table number" onkeyup="tableSearch()"></center>
+            <div class="table-list">
+                <main>
+                    <button class="table-item" >
+                        <h2>Table-1</h2>
+                        <div class="table-details" id="0">
+                            <p>total : <span class="amount">0</span></p>
+                            <p>Items : <span class="items">0</span></p>
+                        </div>                   
+                    </button>
+                    <button class="table-item" >
+                        <h2>Table-2</h2>
+                        <div class="table-details" id="1">
+                            <p>total : <span class="amount">0</span></p>
+                            <p>Items : <span class="items">0</span></p>
+                        </div>
+                    </button>
+                    <button class="table-item"  >
+                        <h2>Table-3</h2>
+                        <div class="table-details" id="2">
+                            <p>total : <span class="amount">0</span></p>
+                            <p>Items : <span class="items">0</span></p>
+                        </div>
+                    </button>
+                    <button class="table-item" >
+                        <h2>Table-4</h2>
+                        <div class="table-details" id="3">
+                            <p>total : <span class="amount">0</span></p>
+                            <p>Items : <span class="items">0</span></p>
+                        </div>
+                    </button>
+                </main>
+            </div>
+        </div>
+        <div class="Menu" >
+            <h3><center>MENU</center></h3>
+            <center><input type='text' id="menu" placeholder="Search Items" onkeyup="menuSearch()"></center>
+            <div class="menu-list">
+                <main >
+                    <div class="menu-item" id="chickenBiryani" draggable="true">
+                        <div class="item-name">Chicken Biryani</div>
+                        <div class="itemType">main </div>
+                        <div><span>220</span></div>
+                    </div>
+                    <div class="menu-item" id="frenchFries"draggable="true">
+                        <div class="item-name">French-Fries</div>
+                        <div class="itemType">entree </div>
+                        <div><span>105</span></div>
+                    </div>
+                    <div class="menu-item" id="chickenPizza" draggable="true">
+                        <div class="item-name">Chicken pizza</div>
+                        <div class="itemType">main </div>
+                        <div><span>180</span></div>
+                    </div>
+                    <div class="menu-item" id="muttonDumBiryani" draggable="true">
+                        <div class="item-name">Mutton Dum Biryani</div>
+                        <div class="itemType">main </div>
+                        <div><span>280</span></div>
+                    </div>
+                    <div class="menu-item" id="chickenMandi" draggable="true">
+                        <div class="item-name">Chicken Mandi</div>
+                        <div class="itemType">main </div>
+                        <div><span>800</span></div>
+                    </div>
+                    <div class="menu-item" id="vegBiryani" draggable="true">
+                        <div class="item-name">Vegetable Biryani</div>
+                        <div class="itemType">main </div>
+                        <div><span>180</span></div>
+                    </div>
+                    <div class="menu-item" id="chickenLollipops" draggable="true">
+                        <div class="item-name">Chicken Lollipops</div>
+                        <div class="itemType">entree </div>
+                        <div><span>180</span></div>
+                    </div>
+                    <div class="menu-item" id="mixedBiryani" draggable="true">
+                        <div class="item-name">Mixed Biryani</div>
+                        <div class="itemType">main </div>
+                        <div><span>280</span></div>
+                    </div>
+                    <div class="menu-item" id="chicken65" draggable="true">
+                        <div class="item-name">chicken65</div>
+                        <div class="itemType">entree </div>
+                        <div><span>220</span></div>
+                    </div>
+                    <div class="menu-item" id="muttonMandi" draggable="true">
+                        <div class="item-name">Mutton Mandi</div>
+                        <div class="itemType">appetizers </div>
+                        <div><span>180</span></div>
+                    </div>
+                    <div class="menu-item" id="greenPapayaSalad" draggable="true">
+                        <div class="item-name">Green Papaya Salad</div>
+                        <div class="itemType">appetizers </div>
+                        <div><span>160</span></div>
+                    </div>
+                    <div class="menu-item" id="spicyLobster" draggable="true">
+                        <div class="item-name">Spicy Lobster</div>
+                        <div class="itemType">appetizers </div>
+                        <div><span>240</span></div>
+                    </div>
+                    <div class="menu-item" id="mozarellaStick" draggable="true">
+                        <div class="item-name">Mozarella Stick</div>
+                        <div class="itemType">appetizers</div>
+                        <div><span>220</span></div>
+                    </div>
+                    <div class="menu-item" id="coke" draggable="true">
+                        <div class="item-name">Coke</div>
+                        <div class="itemType">beverages</div>
+                        <div><span>30</span></div>
+                    </div>
+                    <div class="menu-item" id="water" draggable="true">
+                        <div class="item-name">Water</div>
+                        <div class="itemType">beverages</div>
+                        <div><span>20</span></div>
+                    </div>
+                    <div class="menu-item" id="hotChocolate" draggable="true">
+                        <div class="item-name">Hot Chocolate</div>
+                        <div class="itemType">beverages</div>
+                        <div><span>80</span></div>
+                    </div>
+                    <div class="menu-item" id="bananaMilkShake" draggable="true">
+                        <div class="item-name">Banana Milk Shake</div>
+                        <div class="itemType">beverages</div>
+                        <div><span>70</span></div>
+                    </div>
+                    <div class="menu-item" id="tequila" draggable="true">
+                        <div class="item-name">Tequila</div>
+                        <div class="itemType">beverages</div>
+                        <div><span>180</span></div>
+                    </div>
+                    <div class="menu-item" id="payasam" draggable="true">
+                        <div class="item-name">Paayasam</div>
+                        <div class="itemType">Desserts</div>
+                        <div><span>80</span></div>
+                    </div>
+                    <div class="menu-item" id="gulabJamun" draggable="true">
+                        <div class="item-name">Gulab Jamun</div>
+                        <div class="itemType">Desserts</div>
+                        <div><span>40</span></div>
+                    </div>
+                    <div class="menu-item" id="chocolateCake" draggable="true">
+                        <div class="item-name">Chocolate Cake</div>
+                        <div class="itemType">Desserts</div>
+                        <div><span>60</span></div>
+                    </div>
+                    <div class="menu-item" id="bananaSplit" draggable="true">
+                        <div class="item-name">Banana Split</div>
+                        <div class="itemType">Desserts</div>
+                        <div><span>60</span></div>
+                    </div>
+                    <div class="menu-item" id="iceCream" draggable="true">
+                        <div class="item-name">Ice Cream</div>
+                        <div class="itemType">Desserts</div>
+                        <div><span>60</span></div>
+                    </div>
+    
+                </main>
+            </div>  
+        </div>
+
+    </div>
+        <div>
+            <div class="modal hide" >
+                <button class="close-modal">&times;</button>
+                <table class="modal-container">
+                </table>
+            </div>
+            <div class="overlay hide"></div>
+
+        </div>
+
+        <script src="./scripts/search.js"></script>
+        <script src="./scripts/draganddrop.js"></script>
+        <script src="./scripts/temp.js"></script>
+        <script src="./scripts/modal.js"></script>
+        
+</body>
+</html>
