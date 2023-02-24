@@ -42,6 +42,9 @@ function update_table(item_id,table_id)
 
 function update_web()
 {
+    const data = localStorage.getItem("tables");//1
+     tables=JSON.parse(data)//1
+
     for(var i=0;i<tables.length;i++)
   {
     let s1=document.getElementsByClassName('amount')[i];

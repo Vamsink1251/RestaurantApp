@@ -42,8 +42,12 @@ let tables=[
     count:0,
     items:{}
 }
-]
+];
 
+if(localStorage.getItem("tables")===null)
+{
+localStorage.setItem("tables", JSON.stringify(tables)); //1
+}
 const data = localStorage.getItem("tables");//1
 tables=JSON.parse(data)//1
 setTimeout(update_web(),1000); //1
